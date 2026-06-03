@@ -189,27 +189,45 @@ El mayor aumento de latencia se observa en el salto 3, donde se pasa de menos de
 
 #### nslookup dominio
 ````bash
-[Pega acá la salida del primer nslookup al dominio]
+[Servidor:  one.one.one.one
+Address:  1.1.1.1
+
+Respuesta no autoritativa:
+Nombre:  clarin.com
+Addresses:  2606:4700::6812:78d
+          2606:4700::6812:68d
+          104.18.7.141
+          104.18.6.141]
 ````
 
 #### nslookup MX
 ````bash
-[Pega acá la salida de nslookup -type=MX]
+[Servidor:  one.one.one.one
+Address:  1.1.1.1
+
+Respuesta no autoritativa:
+clarin.com    MX preference = 0, mail exchanger = clarin-com.mail.protection.outlook.com]
 ````
 
 #### nslookup DNS
 ````bash
-[Pegá acá la salida de nslookup a DNS externo]
+[Servidor:  one.one.one.one
+Address:  1.1.1.1
+
+Respuesta no autoritativa:
+Nombre:  google.com
+Addresses:  2800:3f0:4002:815::200e
+          142.251.128.46]
 ````
 
 ### Respuestas
 
 1. IP del dominio principal   
-
+El primer nslookup devolvió las direcciones IPv4 104.18.7.141 y 104.18.6.141, ambas pertenecientes a Cloudflare, que es la CDN donde está alojado clarin.com
 2. RR DNS  
-
+Aparece un único servidor de correo MX: clarin-com.mail.protection.outlook.com con prioridad 0. Al ser el único registro y tener prioridad 0 (la más alta posible), todo el correo de clarin.com se dirige a Microsoft Outlook/Exchange Online
 3. Comparación con DNS por defecto
-
+Sí, en los tres comandos el servidor DNS que aparece es one.one.one.one con dirección 1.1.1.1, que coincide exactamente con el DNS preferido que configuré en el ítem 1. Tener al menos dos servidores DNS (en mi caso 1.1.1.1 y 9.9.9.9) es importante porque si el servidor primario falla o no responde, el sistema automáticamente consulta al secundario, evitando que se pierda la resolución de nombres y la conectividad a Internet.
 ---
 
 ## Item 4 – Verificacyሁn del repositorio y remoto
