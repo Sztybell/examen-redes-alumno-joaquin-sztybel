@@ -17,7 +17,7 @@
 
 ### Salidas de comandos (texto)
 ````bash
-[
+
 Configuraci¢n IP de Windows
 
    Nombre de host. . . . . . . . . : DESKTOP-10JQRQO
@@ -96,11 +96,11 @@ Adaptador de LAN inal mbrica Conexi¢n de  rea local* 10:
                                        fec0:0:0:ffff::2%1
                                        fec0:0:0:ffff::3%1
    NetBIOS sobre TCP/IP. . . . . . . . . . . : habilitado
-]
+
 ````
 
 ````bash
-[C:\Users\LAB4 - PC10\examen-redes-alumno-joaquin-sztybel>ping clarin.com -n 4
+C:\Users\LAB4 - PC10\examen-redes-alumno-joaquin-sztybel>ping clarin.com -n 4
 
 Haciendo ping a clarin.com [104.18.6.141] con 32 bytes de datos:
 Respuesta desde 104.18.6.141: bytes=32 tiempo=7ms TTL=57
@@ -112,7 +112,7 @@ Estadísticas de ping para 104.18.6.141:
     Paquetes: enviados = 4, recibidos = 4, perdidos = 0
     (0% perdidos),
 Tiempos aproximados de ida y vuelta en milisegundos:
-    Mínimo = 2ms, Máximo = 7ms, Media = 4ms]
+    Mínimo = 2ms, Máximo = 7ms, Media = 4ms
 ````
 
 ### Respuestas a las preguntas
@@ -135,7 +135,7 @@ El enunciado prohíbe usar 8.8.8.8 porque en redes institucionales o educativas 
 
 ### Salidas de comandos (texto)
 ````bash
-[Traza a la dirección clarin.com [104.18.7.141]
+Traza a la dirección clarin.com [104.18.7.141]
 sobre un máximo de 30 saltos:
 
   1    <1 ms    <1 ms    <1 ms  10.101.101.1
@@ -147,11 +147,11 @@ sobre un máximo de 30 saltos:
   7     4 ms     3 ms     3 ms  198.41.228.7
   8     3 ms     3 ms     3 ms  104.18.7.141
 
-Traza completa.]
+Traza completa.
 ````
 
 ````bash
-[  TCP    10.101.101.150:11399   64.233.190.188:443     ESTABLISHED
+  TCP    10.101.101.150:11399   64.233.190.188:443     ESTABLISHED
   TCP    10.101.101.150:11401   140.82.113.25:443      ESTABLISHED
   TCP    10.101.101.150:11402   160.79.104.10:443      ESTABLISHED
   TCP    10.101.101.150:11423   23.64.58.151:443       CLOSE_WAIT
@@ -164,7 +164,7 @@ Traza completa.]
   TCP    10.101.101.150:11605   100.27.143.105:443     ESTABLISHED
   TCP    10.101.101.150:11609   4.160.58.169:443       ESTABLISHED
   TCP    10.101.101.150:11610   52.123.130.14:443      ESTABLISHED
-  TCP    10.101.101.150:37819   172.172.255.216:443    ESTABLISHED]
+  TCP    10.101.101.150:37819   172.172.255.216:443    ESTABLISHED
 ````
 
 ### Respuesta
@@ -189,7 +189,7 @@ El mayor aumento de latencia se observa en el salto 3, donde se pasa de menos de
 
 #### nslookup dominio
 ````bash
-[Servidor:  one.one.one.one
+Servidor:  one.one.one.one
 Address:  1.1.1.1
 
 Respuesta no autoritativa:
@@ -197,27 +197,27 @@ Nombre:  clarin.com
 Addresses:  2606:4700::6812:78d
           2606:4700::6812:68d
           104.18.7.141
-          104.18.6.141]
+          104.18.6.141
 ````
 
 #### nslookup MX
 ````bash
-[Servidor:  one.one.one.one
+Servidor:  one.one.one.one
 Address:  1.1.1.1
 
 Respuesta no autoritativa:
-clarin.com    MX preference = 0, mail exchanger = clarin-com.mail.protection.outlook.com]
+clarin.com    MX preference = 0, mail exchanger = clarin-com.mail.protection.outlook.com
 ````
 
 #### nslookup DNS
 ````bash
-[Servidor:  one.one.one.one
+Servidor:  one.one.one.one
 Address:  1.1.1.1
 
 Respuesta no autoritativa:
 Nombre:  google.com
 Addresses:  2800:3f0:4002:815::200e
-          142.251.128.46]
+          142.251.128.46
 ````
 
 ### Respuestas
@@ -242,15 +242,15 @@ Sí, en los tres comandos el servidor DNS que aparece es one.one.one.one con dir
 ### Salidas de comandos (texto)
 
 ````bash
-[97b9830 (HEAD -> main, origin/main) agregar consultas DNS y análisis de registros MX
+97b9830 (HEAD -> main, origin/main) agregar consultas DNS y análisis de registros MX
 f09cdc7 agregar trazado de ruta y análisis de conexiones activas
 2d304fa feat: agregar configuración IP estática y verificación de conectividad
-24784b3 Se agrego el archivo README]
+24784b3 Se agrego el archivo README
 ````
 
 ````bash
-[origin  https://github.com/Sztybell/examen-redes-alumno-joaquin-sztybel.git (fetch)
-origin  https://github.com/Sztybell/examen-redes-alumno-joaquin-sztybel.git (push)]
+origin  https://github.com/Sztybell/examen-redes-alumno-joaquin-sztybel.git (fetch)
+origin  https://github.com/Sztybell/examen-redes-alumno-joaquin-sztybel.git (push)
 ````
 
 ---
@@ -267,8 +267,8 @@ origin  https://github.com/Sztybell/examen-redes-alumno-joaquin-sztybel.git (pus
 ### Salidas de comandos
 
 ````bash
-[* feature-diagnostico
-  main]
+* feature-diagnostico
+  main
 ````
 
 ### Respuestas
