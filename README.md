@@ -272,3 +272,4 @@ origin  https://github.com/Sztybell/examen-redes-alumno-joaquin-sztybel.git (pus
 
 ### Respuestas
 
+1. Los Merge Requests permiten revisar el código antes de integrarlo a la rama principal, evitando errores. Además, generan un registro de quién propuso y aprobó cada cambio, lo que mejora la trazabilidad y el trabajo en equipo.
