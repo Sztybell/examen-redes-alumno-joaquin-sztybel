@@ -135,19 +135,44 @@ El enunciado prohíbe usar 8.8.8.8 porque en redes institucionales o educativas 
 
 ### Salidas de comandos (texto)
 ````bash
-[Pega acá la salida de tracert al dominio]
+[Traza a la dirección clarin.com [104.18.7.141]
+sobre un máximo de 30 saltos:
+
+  1    <1 ms    <1 ms    <1 ms  10.101.101.1
+  2    <1 ms     *        1 ms  192.168.1.1
+  3     3 ms    11 ms    31 ms  200.51.241.1
+  4     3 ms     2 ms     *     213.140.39.117
+  5    15 ms    10 ms     2 ms  213.140.39.116
+  6     5 ms    16 ms     4 ms  cloudflare-ae70-0-grtbueba1.net.telefonicaglobalsolutions.com [94.142.103.101]
+  7     4 ms     3 ms     3 ms  198.41.228.7
+  8     3 ms     3 ms     3 ms  104.18.7.141
+
+Traza completa.]
 ````
 
 ````bash
-[Pegá acá la salida de netstat -n | findstr :443]
+[  TCP    10.101.101.150:11399   64.233.190.188:443     ESTABLISHED
+  TCP    10.101.101.150:11401   140.82.113.25:443      ESTABLISHED
+  TCP    10.101.101.150:11402   160.79.104.10:443      ESTABLISHED
+  TCP    10.101.101.150:11423   23.64.58.151:443       CLOSE_WAIT
+  TCP    10.101.101.150:11584   142.251.129.69:443     ESTABLISHED
+  TCP    10.101.101.150:11590   142.251.129.69:443     ESTABLISHED
+  TCP    10.101.101.150:11594   4.203.73.113:443       ESTABLISHED
+  TCP    10.101.101.150:11597   34.149.66.154:443      ESTABLISHED
+  TCP    10.101.101.150:11601   34.149.66.154:443      ESTABLISHED
+  TCP    10.101.101.150:11604   172.67.139.187:443     ESTABLISHED
+  TCP    10.101.101.150:11605   100.27.143.105:443     ESTABLISHED
+  TCP    10.101.101.150:11609   4.160.58.169:443       ESTABLISHED
+  TCP    10.101.101.150:11610   52.123.130.14:443      ESTABLISHED
+  TCP    10.101.101.150:37819   172.172.255.216:443    ESTABLISHED]
 ````
 
 ### Respuesta
 
 1. Salto con mayor latencia / cantidad de saltos >100ms  
-
+El mayor aumento de latencia se observa en el salto 3, donde se pasa de menos de 1 ms (salto 2) a entre 3 y 31 ms. Esto coincide con el ingreso a la red del ISP (200.51.241.1), lo que indica que el tráfico salió de la red local y entró a la infraestructura de Telefónica. A partir del salto 6 aparece un nodo de Telefónica Global Solutions, lo que sugiere que el tráfico cruza hacia una red troncal internacional antes de llegar a los servidores de Cloudflare donde está alojado clarin.com
 2. Conexiones al puerto indicado  
-   
+   Hay 14 conexiones activas al puerto 443. La mayoría están en estado ESTABLISHED, lo que significa que hay comunicación HTTPS activa en ese momento. Una conexión (puerto local 11423 hacia 23.64.58.151) está en estado CLOSE_WAIT, indicando que el servidor remoto cerró la conexión pero el sistema local aún no la liberó completamente. Las IPs remotas corresponden a servicios conocidos: 64.233.190.188 y 142.251.129.69 pertenecen a Google, 140.82.113.25 pertenece a GitHub, y 172.67.139.187 pertenece a Cloudflare
 
 ---
 
