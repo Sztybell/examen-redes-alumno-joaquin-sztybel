@@ -242,11 +242,15 @@ Sí, en los tres comandos el servidor DNS que aparece es one.one.one.one con dir
 ### Salidas de comandos (texto)
 
 ````bash
-[Pega acá la salida de git log --oneline]
+[97b9830 (HEAD -> main, origin/main) agregar consultas DNS y análisis de registros MX
+f09cdc7 agregar trazado de ruta y análisis de conexiones activas
+2d304fa feat: agregar configuración IP estática y verificación de conectividad
+24784b3 Se agrego el archivo README]
 ````
 
 ````bash
-[Pega acá la salida de git remote -v]
+[origin  https://github.com/Sztybell/examen-redes-alumno-joaquin-sztybel.git (fetch)
+origin  https://github.com/Sztybell/examen-redes-alumno-joaquin-sztybel.git (push)]
 ````
 
 ---
