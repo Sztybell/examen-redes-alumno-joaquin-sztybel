@@ -267,7 +267,8 @@ origin  https://github.com/Sztybell/examen-redes-alumno-joaquin-sztybel.git (pus
 ### Salidas de comandos
 
 ````bash
-[Pega acá la salida de git branch]
+[* feature-diagnostico
+  main]
 ````
 
 ### Respuestas
